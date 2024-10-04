@@ -68,7 +68,7 @@ const BookList = () => {
                     <button onClick={(e) => { e.stopPropagation(); deactivateBook(book.id); }} className='deactivate-button'>Deactivate</button>
                   </td>
                 </tr>
-              ))
+              ))// **//
           ) : (
             <tr>
               <td colSpan="8">No books available</td>
