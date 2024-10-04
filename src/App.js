@@ -1,25 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState,useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Login from './components/Login';
+import BookList from './components/BookList';
+import BookDetails from './components/BookDetails';
 
-function App() {
+const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return localStorage.getItem('isAuthenticated') === 'true';
+  });
+  const [books, setBooks] = useState([]); // Add state to hold books
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+    localStorage.setItem('isAuthenticated', 'true');
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    localStorage.removeItem('isAuthenticated');
+  };
+
+  const fetchBooks = async () => {
+    try {
+      const response = await fetch('/books.json');
+      if (!response.ok) throw new Error('Network response was not ok');
+      const data = await response.json();
+      setBooks(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  // Fetch books only if authenticated
+  useEffect(() => {
+    if (isAuthenticated) {
+      fetchBooks();
+    }
+  }, [isAuthenticated]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login onLogin={handleLogin} />} />
+        <Route
+          path="/books"
+          element={isAuthenticated ? (
+            <div>
+              <BookList books={books} />
+              <button onClick={handleLogout} className="button">Logout</button>
+            </div>
+          ) : (
+            <Navigate to="/login" />
+          )}
+        />
+        <Route 
+          path="/books/:id" 
+          element={<BookDetails books={books} />} 
+        />
+        <Route path="/" element={<Navigate to="/login" />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

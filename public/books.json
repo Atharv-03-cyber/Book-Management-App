@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "cover": "/images/JurrassicPark.jpg",
+    "title": "Jurassic Park",
+    "author": "Michael Crichton",
+    "description": "An astonishing technique for recovering and cloning dinosaur DNA has been discovered. Now humankind's most thrilling fantasies have come true. Creatures extinct for eons roam Jurassic Park with their awesome presence and profound mystery, and all the world can visit them—for a price. Until something goes wrong. . . .In Jurassic Park, Michael Crichton taps all his mesmerizing talent and scientific brilliance to create his most electrifying technothriller.",
+    "genre": "Adventure",
+    "publication": "1990",
+    "pages": 466,
+    "price": 9.66,
+    "isActive": "true",
+    "path": "./src/components/BookDetails/Countless.js"
+  },
+  {
+    "id": 2,
+    "cover": "/images/Countless.jpg",
+    "title": "Countless",
+    "author": "Suzan Palumbo",
+    "description": "A queer, Caribbean, anti-colonial sci-fi novella, inspired by the Count of Monte Cristo, in which a betrayed captain seeks revenge on the interplanetary empire that subjugated her people for generations.Virika Sameroo lives in colonized space under the Æerbot Empire, much like her ancestors before her in the British West Indies. After years of working hard to rise through the ranks of the empire’s merchant marine, she’s finally become first lieutenant on an interstellar cargo vessel.When her captain dies under suspicious circumstances, Virika is arrested for murder and charged with treason despite her lifelong loyalty to the empire. Her conviction and subsequent imprisonment set her on a path to justice, determined to take down the evil empire that wronged her, all while the fate of her people hangs in the balance.",
+    "genre": "Science Fiction",
+    "publication": "2024",
+    "pages": 250,
+    "price": 4.99,
+    "isActive": "true"
+  },
+  {
+    "id": 3,
+    "cover": "/images/SkyOfElephants.jpg",
+    "title": "Sky Full of Elephants",
+    "author": "Cebo Campbell",
+    "description": "In this exquisite speculative novel set in a world where white people no longer exist, college professor Charlie Brunton receives a call from his estranged daughter Sidney, setting off a chain of events as they journey across a truly “post-racial” America in search of answers.One day, a cataclysmic event occurs: all of the white people in America walk into the nearest body of water. A year later, Charles Brunton is a Black man living in an entirely new world. Having served time in prison for a wrongful conviction, he’s now a professor of electric and solar power systems at Howard University when he receives a call from someone he wasn’t even sure existed: his daughter Sidney, a nineteen-year-old who watched her white mother and step-family drown themselves in the lake behind their house.Traumatized by the event, and terrified of the outside world, Sidney has spent a year in isolation in Wisconsin. Desperate for help, she turns to the father she never met, a man she has always resented. Sidney and Charlie meet for the first time as they embark on a journey across America headed for Alabama, where Sidney believes she may still have some family left. But neither Sidney or Charlie is prepared for this new world and how they see themselves in it.",
+    "genre": "Science Fiction",
+    "publication": "2024",
+    "pages": 250,
+    "price": 14.99,
+    "isActive": "true"
+  },
+  {
+    "id": 4,
+    "cover": "/images/William.jpg",
+    "title": "Williams",
+    "author": "Mason Coile",
+    "description": "Psychological horror meets cyber noir in this delicious one-sitting read — a haunted house story in which the haunting is by AI.Henry is a brilliant engineer who, after untold hours spent in his home lab, has achieved the breakthrough of his career — he’s created an artificially intelligent consciousness. He calls the half-formed robot William.No one knows about William. Henry’s agoraphobia keeps him inside the house, and his fixation on his project keeps him up in the attic, away from everyone, including his pregnant wife, Lily.When Lily’s coworkers show up, wanting to finally meet Henry and see the new house — the smartest of smart homes — Henry decides to introduce them to William, and things go from strange to much worse. Soon Henry and Lily discover the security upgrades intended to keep danger out of the house are even better at locking it in.",
+    "genre": "Horror",
+    "publication": "2024",
+    "pages": 224,
+    "price": 14.99,
+    "isActive": "true"
+  },
+  {
+    "id": 5,
+    "cover": "/images/sommaran.jpg",
+    "title": "Sommaren 1985",
+    "author": "John Ajvide Lindqvist",
+    "description": "That was that summer. Summer 1985. Live Aid summer.On Särsö in the Roslagen archipelago there is a group of friends – four boys and three girls who have been together for as long as they can remember. In the summer of 1985, all but one have turned fourteen and the relationships begin to change.To prove themselves tough in front of the girls, the boys make a boat trip to the hard-to-reach island of Svärtan. On a secluded beach, they find something incredible: a mermaid. Not the Disney variant, but a rather nasty sea creature with human features. It is tied up and dying because it cannot get down to the water. The guys decide to take the creature home, where they hide it in a water-filled bathtub in a boathouse. But it soon turns out that the mermaid has abilities that have a divisive effect on the gang. What is it really capable of and why was it tied up?The Summer of 1985 is a story about finding one's identity in relation to others, about love and friendship during formative years. It's also a nostalgia trip to the 80s",
+    "genre": "Drama",
+    "publication": "2023",
+    "pages": 326,
+    "price": 10.99,
+    "isActive": "true"
+  },
+  {
+    "id": 6,
+    "cover": "/images/Playgrounds.jpg",
+    "title": "Playground",
+    "author": "Richard Powers",
+    "description": "A magisterial new novel from the Pulitzer Prize–winning and New York Times best-selling author of The Overstory and Bewilderment.Four lives are drawn together in a sweeping, panoramic new novel from Richard Powers, showcasing the Pulitzer Prize–winning author of The Overstory at the height of his skills. Twelve-year-old Evie Beaulieu sinks to the bottom of a swimming pool in Montreal strapped to one of the world’s first aqualungs. Ina Aroita grows up on naval bases across the Pacific with art as her only home. Two polar opposites at an elite Chicago high school bond over a three-thousand-year-old board game; Rafi Young will get lost in literature, while Todd Keane’s work will lead to a startling AI breakthrough.They meet on the history-scarred island of Makatea in French Polynesia, whose deposits of phosphorus once helped to feed the world. Now the tiny atoll has been chosen for humanity’s next adventure: a plan to send floating, autonomous cities out onto the open sea. But first, the island’s residents must vote to greenlight the project or turn the seasteaders away.Set in the world’s largest ocean, this awe-filled book explores that last wild place we have yet to colonize in a still-unfolding oceanic game, and interweaves beautiful writing, rich characterization, profound themes of technology and the environment, and a deep exploration of our shared humanity in a way only Richard Powers can.",
+    "genre": "Biography",
+    "publication": "2024",
+    "pages": 381,
+    "price": 9.66,
+    "isActive": "true"
+  }
+]
