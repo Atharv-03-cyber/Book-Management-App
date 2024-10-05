@@ -4,6 +4,9 @@ import './BookList.css';
 
 const BookList = () => {
   const [books, setBooks] = useState([]);
+  const [isEditing, setIsEditing] = useState(false);
+  const [currentBook, setCurrentBook] = useState(null);
+  const [formValues, setFormValues] = useState({ title: '', price: '' });
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -32,10 +35,49 @@ const BookList = () => {
       )
     );
   };
-  
+
+  const editBook = (book) => {
+    setIsEditing(true);
+    setCurrentBook(book);
+    setFormValues({ title: book.title, price: book.price });
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues((prevValues) => ({ ...prevValues, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const updatedBooks = books.map((book) =>
+      book.id === currentBook.id
+        ? { ...book, title: formValues.title, price: parseFloat(formValues.price) }
+        : book
+    );
+    setBooks(updatedBooks);
+    setIsEditing(false);
+    setCurrentBook(null);
+    setFormValues({ title: '', price: '' });
+  };
+
   return (
     <div className='container'>
       <h1 className='heading'>Books Management Tool</h1>
+      {isEditing && (
+        <form onSubmit={handleSubmit} className='edit-form'>
+          <h2>Edit Book</h2>
+          <label>
+            Title:
+            <input type='text' name='title' value={formValues.title} onChange={handleInputChange} required maxLength={100} minLength={1}/>
+          </label>
+          <label>
+            Price:
+            <input type='number' name='price' value={formValues.price} onChange={handleInputChange} required min={1} />
+          </label>
+          <button type='submit'>Update</button>
+          <button type='button' onClick={() => setIsEditing(false)}>Cancel</button>
+        </form>
+      )}
       <table className='table'>
         <thead className='table-top'>
           <tr>
@@ -66,9 +108,10 @@ const BookList = () => {
                   <td>${book.price.toFixed(2)}</td>
                   <td>
                     <button onClick={(e) => { e.stopPropagation(); deactivateBook(book.id); }} className='deactivate-button'>Deactivate</button>
+                    <button onClick={(e) => { e.stopPropagation(); editBook(book); }} className='edit-button'>Edit</button>
                   </td>
                 </tr>
-              ))// **//
+              ))
           ) : (
             <tr>
               <td colSpan="8">No books available</td>
